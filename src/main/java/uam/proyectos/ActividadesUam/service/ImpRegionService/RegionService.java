@@ -29,7 +29,7 @@ public class RegionService implements IntRegionService {
     private RegionDto mapRegionToRegionDto(Region region) {
         return RegionDto.builder()
                 .id(region.getId())
-                .name(region.getName())
+                .name(region.getNombre())
                 .build();
     }
 }

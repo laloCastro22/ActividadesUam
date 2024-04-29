@@ -5,7 +5,6 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -14,26 +13,26 @@ import java.util.Set;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Account {
+public class Cuenta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String nombre;
 
     private String website;
 
     @Column(precision = 9, scale = 6)
-    private BigDecimal lat;
+    private BigDecimal latitud;
 
     @Column(name = "LONGITUDE", precision = 9, scale = 6)
-    private BigDecimal longitude;
+    private BigDecimal longitud;
 
     @Column(name = "PRIMARY_POC")
     private String primaryPoc;
 
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "account")
-    private Set<Order> orders = new HashSet<>(0);
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "cuenta")
+    private Set<Orden> ordenes = new HashSet<>(0);
 
 }

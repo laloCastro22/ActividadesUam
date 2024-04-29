@@ -19,7 +19,7 @@ public class WebEvent {
 
     @ManyToOne
     @JoinColumn(name = "ACCOUNT_ID")
-    private Account account;
+    private Cuenta account;
 
     @Column(name = "OCCURRED_AT")
     private Date occurredAt;

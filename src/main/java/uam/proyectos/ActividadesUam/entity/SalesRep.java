@@ -15,7 +15,7 @@ public class SalesRep {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String nombre;
 
     @ManyToOne
     @JoinColumn(name = "REGION_ID")

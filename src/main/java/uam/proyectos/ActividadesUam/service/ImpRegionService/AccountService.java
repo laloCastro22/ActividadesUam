@@ -3,7 +3,7 @@ package uam.proyectos.ActividadesUam.service.ImpRegionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uam.proyectos.ActividadesUam.dto.SucursalDto;
-import uam.proyectos.ActividadesUam.dto.intdto.AccountProjection;
+import uam.proyectos.ActividadesUam.dto.intdto.CuentaProyeccion;
 import uam.proyectos.ActividadesUam.repository.AccountRepository;
 import uam.proyectos.ActividadesUam.repository.ConsultaJbdc;
 import uam.proyectos.ActividadesUam.service.IntAccountService;
@@ -29,7 +29,7 @@ public class AccountService implements IntAccountService {
     }
 
     @Override
-    public List<AccountProjection> findSucursalesByJpa() {
+    public List<CuentaProyeccion> findSucursalesByJpa() {
         return accountRepository.findAllByQuery();
     }
 

@@ -12,14 +12,14 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
+public class Orden {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCOUNT_ID")
-    private Account account;
+    private Cuenta cuenta;
 
     @Column(name = "OCCURRED_AT")
     private Date occurredAt;

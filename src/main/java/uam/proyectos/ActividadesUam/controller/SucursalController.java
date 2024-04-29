@@ -3,7 +3,7 @@ package uam.proyectos.ActividadesUam.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import uam.proyectos.ActividadesUam.dto.SucursalDto;
-import uam.proyectos.ActividadesUam.dto.intdto.AccountProjection;
+import uam.proyectos.ActividadesUam.dto.intdto.CuentaProyeccion;
 import uam.proyectos.ActividadesUam.service.IntAccountService;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class SucursalController {
     }
 
     @GetMapping("/all-jpa")
-    public List<AccountProjection> getAllSucursalesByJpa() {
+    public List<CuentaProyeccion> getAllSucursalesByJpa() {
         return accountService.findSucursalesByJpa();
     }
 }
